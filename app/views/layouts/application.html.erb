@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dkineev</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div style="color: blue; text-align: center"><h1>RUBY</h1></div>
+<div style="text-align: center">
+	<%=link_to "HOME", :controller => 'static_pages', :action => 'index'%>
+	<%=link_to "One", :controller => 'static_pages', :action => 'page_one'%>
+	<%=link_to "Two", :controller => 'static_pages', :action => 'page_two'%>
+	<%=link_to "Three", :controller => 'static_pages', :action => 'page_three'%>
+</div>
+<hr>
+<%= yield %>
+<hr>
+</body>
+</html>
